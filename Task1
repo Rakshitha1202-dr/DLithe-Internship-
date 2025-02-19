@@ -1,0 +1,26 @@
+void setup() {
+  // put your setup code here, to run once:
+pinMode(42, OUTPUT);
+pinMode(6, OUTPUT);
+pinMode(5, OUTPUT);
+Serial.begin(9600);
+}
+
+void loop() {
+  digitalWrite(42, HIGH);
+  digitalWrite(6, LOW);
+  digitalWrite(5, LOW);
+  Serial.print("LED is ON");
+  Serial.println("Buzzer is OFF");
+  Serial.println("Relay is OFF");
+  delay(1000);
+  digitalWrite(42, LOW);
+  digitalWrite(6,HIGH);
+  digitalWrite(5, HIGH);
+  Serial.println("LED is OFF");
+  Serial.println("Buzzer is ON");
+  Serial.println("Relay is OFF");
+  delay(2000);
+  // put your main code here, to run repeatedly:
+
+}
