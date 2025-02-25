@@ -13,7 +13,19 @@ void loop() {
   int tiltvalue = analogRead(tilt);
   if(tiltvalue>90)
   {
-    analogWrite(servo,)
+    analogWrite(servo,-90);
+  }
+  else if(tiltvalue>180)
+  {
+    analogWrite(servo,-180);
+  }
+  else if(tiltvalue>360)
+  {
+    analogWrite(servo, -360);
+  }
+  else
+  {
+    analogWrite(servo,0);
   }
 
 }
